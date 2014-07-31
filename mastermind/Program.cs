@@ -17,8 +17,6 @@ namespace mastermind
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            algorithm a = new algorithm();
-            a.helloWorld();
         }
     }
 
