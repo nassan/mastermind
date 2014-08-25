@@ -50,7 +50,7 @@ namespace mm_algorithm
                 count++;
             } while (a.black_pins < 4);
 
-            Console.WriteLine("it tolk " + count + " times");
+            Console.WriteLine("it took " + count + " times");
 
             //function that checks how many are at the same place
         }
