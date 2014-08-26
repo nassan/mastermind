@@ -12,9 +12,7 @@ namespace mm_algorithm
         static void Main(string[] args)
         {
             // made one random that everybody can call it
-            Random rnd = new Random();
-
-            logic(rnd);
+       
 
         }
 
