@@ -34,12 +34,14 @@ namespace mm_algorithm
                 Console.WriteLine(manager.answer.ToString() + " answer\n");
                 Console.WriteLine(a.ToString() + " guess\n");
                 Console.WriteLine(a.black_pins + " " + a.white_pins);
-                //goes therw the hole array from up to down and ereases the not possiable options
+                
+                //goes threw the hole array from up to down and erases the not possible options
                 for (int i = manager.possibilities.Count - 1; i >= 0; i--)
                 {
                     Row check = manager.possibilities[i] as Row;
                     int samePlace = HowManySamePlace(a, check);
                     int amount = HowManySameAll(a, check);
+                    
                     //the logic
                     if (a.black_pins != samePlace || amount > a.white_pins + a.black_pins)
                         manager.possibilities.RemoveAt(i);
@@ -50,8 +52,9 @@ namespace mm_algorithm
 
             Console.WriteLine("it took " + count + " times");
 
-            //function that checks how many are at the same place
         }
+
+        //function that checks how many are at the same place
         public static int HowManySamePlace(Row first, Row second)
         {
             int total = 0;
@@ -62,6 +65,7 @@ namespace mm_algorithm
             }
             return total;
         }
+        
         //function that checks how many similaritis are their 
         public static int HowManySameAll(Row first, Row second)
         {
